@@ -1,0 +1,573 @@
+@charset "UTF-8";
+
+/* Import Open Sans from Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* Temporary CSS file for portfolio site redesign */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', helvetica, arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    background-color: #fff;
+/*    background-color: #fafafa; */
+    color: #444;
+    margin: 0;
+}
+
+.headwrap {
+    width: 100%;
+    padding: 30px 0 0 0;
+    background-color:  #34657F;
+    background-color: #2A7297;
+}
+
+@media (max-width: 750px) {
+    header {
+        width: 100%;
+        margin: 0;
+    }
+    h1 {
+        padding: 20px 0 40px 0;
+        margin: 0 auto;
+        font-size: 5.5rem;
+        font-weight: normal;
+        letter-spacing: 0.1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    nav.main-nav ul {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items:last baseline;
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 0 0;
+    }
+}
+
+@media (min-width: 751px)
+{
+    header {
+        display: flex;
+        width: 75%;
+        height: 80px;
+        max-width: 960px;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 0 auto;
+    }
+
+    h1 {
+        display: flex;
+        margin: 0;
+        padding-bottom: 0;
+        font-size: 5.5rem;
+        line-height: 7rem;
+        font-weight: normal;
+        letter-spacing: 0.1rem;
+    /*    color: #34657F;
+    /*    color: #fafafa; */
+        color: #fff;
+        text-align: center;
+        align-self: flex-end;
+    }
+
+    nav.main-nav {
+        flex: 1 0 auto;
+        display: flex;
+    }
+
+    nav.main-nav ul {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items:last baseline;
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 0 0;
+    }
+}
+
+nav.main-nav ul li {
+    font-size: 2.0rem;
+    margin: 0;
+    padding: 0 20px 0.6rem 20px;
+}
+nav.main-nav ul li:last-child {
+    padding: 0 0 0 20px;
+}
+
+nav.main-nav ul li a {
+    display: block;
+    padding: 0px 1px;
+    text-decoration: none;
+    border-top: thin solid transparent;
+    border-bottom: thin solid transparent;
+    border-collapse:collapse;
+    border-radius: 0;
+    color: #444;
+    color: #fafafa;
+}
+
+nav.main-nav ul li a:hover {
+    border-bottom: thin solid #fafafa;
+}
+
+nav.main-nav ul li.this a {
+    border-top: thin solid #ddd;
+    border-left: thin solid #ddd;
+    border-right: thin solid #ddd;
+    border-radius: 7px 7px 0 0;
+}
+
+
+.content {
+    width: 75%;
+    max-width: 960px;
+    margin: 5px auto;
+    padding: 0 0 30px 0;
+}
+
+.content h2 {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    color: #444;
+}
+
+.content h2.hi {
+    padding-bottom: 1rem;
+}
+.content h3 {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+}
+.content h4 {
+    font-size: 2.0rem;
+    line-height: 2.8rem;
+}
+
+.content p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 0 0 1em 0;
+}
+
+.content .note {
+    width: calc(100% - 20px);
+    margin: 40px 0;
+    font-style: italic;
+}
+
+.content .note h3 {
+    display: inline;
+    font-size: 2rem;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    margin: 0;
+    background-color: #34657F;
+    color: #fff;
+    padding: 5px 10px 0 10px;
+}
+.content .note p {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 0 0 2rem 0;
+    background-color: #ededed;
+    border-left: 10px solid #34657F;
+}
+.content a {
+    color: #e06c00;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.content ul li {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 2.0rem;
+}
+
+.intro {
+    padding-top: 60px;
+}
+
+.intro h2 {
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+}
+.intro p.readmore {
+    font-size: 1.2rem;
+    text-align: right;
+}
+.intro p.readmore a {
+    color: #34657F;
+    background-color: #e1e1e1;
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 7px;
+}
+
+
+/* Setting up Flexbox for the work projects list. */
+
+@media (max-width: 800px) {
+    .work-wrapper {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-content: center;
+        margin-top: 50px;
+    }
+
+    .work-wrapper .project {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 801px) {
+    .work-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: center;
+        margin-top: 50px;
+    }
+
+    .work-wrapper .project {
+        display: flex;
+        flex: 1 0 300px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+}
+
+/*
+.work-wrapper .project:not(:first-child) {
+    border-left: thin solid #ddd;
+}
+*/
+
+
+
+/* Styles for the individual project pages. */
+
+@media (max-width: 750px) {
+    body.project .content .project-logo {
+        padding: 5px;
+        border: thin solid #ccc;
+        border-radius: 10px;
+        margin: 40px auto 20px auto;
+    }
+}
+
+@media (min-width: 751px) {
+    body.project .content .project-logo {
+        float: right;
+        padding: 5px;
+        border: thin solid #ccc;
+        border-radius: 10px;
+    }
+}
+
+/*
+body.project .content .project-logo img {
+}
+*/
+
+body.project .content figure {
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+body.project .content figure img {
+    width: 100%;
+}
+body.project .content figure figcaption {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-style: italic;
+    text-align: right;
+}
+
+
+body.project .content .screenshot img {
+    border: thin solid #444;
+}
+body.project .content .screenshot p.caption {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+@media (max-width: 350px)
+{
+    body.project .content .subproject {
+        width: 100%;
+    }
+
+    .content .subproject .screenshot {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 351px)
+{
+    body.project .content .subproject .screenshot.single {
+        width: 70.5882353%;
+        margin: 20px auto;
+    }
+
+    body.project .content .subproject .screenshot_wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-around;
+        align-items: flex-start;
+        align-content: space-between;
+        width: 84.7058824%;
+/*        width: 130%; */
+        margin: 20px auto;
+    }
+    body.project .content .subproject .screenshot_wrapper .screenshot {
+        flex: 1 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Resume page */
+
+#resume {
+    clear: both;
+    margin: 0 auto;
+}
+
+.content#resume ul li {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 720px) {
+
+	#resume h3 {
+		font-size: 2.2rem;
+		margin: 30px 0 20px 0;
+		padding-top: 10px;
+		border-top-width: thin;
+		border-top-style: solid;
+	}
+
+	#resume .skills {
+		width: 85%;
+		margin: 20px auto 50px auto;
+	}
+
+	#resume #skills ul {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#resume .position, #resume .school {
+		margin: 20px 0;
+		padding: 0 0 20px 0;
+		border-bottom-width: thin;
+		border-bottom-style: solid;
+	}
+
+	#resume h4 {
+		margin-bottom: 0;
+	}
+
+	#resume .position .when, #resume .school .when {
+		margin: 0;
+		font-style: italic;
+	}
+}  /* End (screen, max-width: 720px) */
+
+
+@media screen and (min-width: 720px) and (max-width: 1020px) {
+
+	#resume h3 {
+        font-size: 2.2rem;
+		margin: 30px 0 40px 0;
+		padding-top: 10px;
+		border-top-width: thin;
+		border-top-style: solid;
+	}
+
+	#resume .skills {
+		width: 85%;
+		margin: 20px auto 50px auto;
+	}
+
+	#resume #skills ul {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#resume .position, #resume .school {
+		margin: 20px 0;
+		padding: 0 0 20px 0;
+		border-bottom-width: thin;
+		border-bottom-style: solid;
+	}
+
+	#resume h4 {
+		margin-bottom: 0;
+	}
+
+	#resume .position .when, #resume .school .when {
+		margin: 0;
+		font-style: italic;
+		white-space: nowrap;
+	}
+}  /* End (screen, max-width: 960px) */
+
+
+
+@media screen and (min-width: 1020px) {
+	#resume {
+        width: 93.75%;
+		max-width: 960px;
+	}
+
+	#resume h3 {
+        font-size: 2.6rem;
+		margin: 40px 0 40px 0;
+		padding-top: 10px;
+		border-top-width: thin;
+		border-top-style: solid;
+	}
+
+	#resume .skills, #resume .experience, #resume .education {
+		width: 90%;
+		margin: 20px 0 50px 10%;
+	}
+
+	#resume .position, #resume .school {
+		margin: 40px 0;
+		padding: 0 0 30px 0;
+	}
+	#resume .position:not(:last-child), #resume .school:not(:last-child) {
+		border-bottom-width: thin;
+		border-bottom-style: solid;
+    }
+
+    /* Position title, school name */
+    #resume .position-title-dates {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+    #resume .position-title-dates > *, #resume .school > * {
+		margin: 0;
+    }
+
+    #resume .position .when, #resume .school .when {
+		font-style: italic;
+        line-height: inherit;
+        color: #777;
+        margin: 0;
+	}
+
+    #resume .position .org {
+        margin-top: 0;
+    }
+
+
+
+}  /* End (screen, max-width: 960px) */
+
+
+
+
+/* The footer */
+
+footer {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    /* border-top: 1px solid #34657F; */
+    border-top: thin solid #ccc;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    padding: 10px 0 30px 0;
+}
+body#home footer {
+    border-top: none;
+}
+
+footer nav.footnav ul {
+    list-style: none;
+    padding-left: 0;
+}
+footer nav.footnav ul li {
+    display: inline;
+}
+footer nav.footnav ul li a {
+    color: #34657F;
+    text-decoration: none;
+}
+footer nav.footnav ul li a:hover {
+    border-bottom: thin solid #34657F;
+}
+
+footer nav.footnav ul li:not(:last-child)::after {
+    color: #ccc;
+    content: " | ";
+}
+
+/*
+footer p {
+}
+*/
+
+
+/* Colophon */
+
+.content#colophon h2 {
+    margin-bottom: 0;
+}
+
+.content#colophon h3.subhead {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: normal;
+    margin-top: 0;
+}
